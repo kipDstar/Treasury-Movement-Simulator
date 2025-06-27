@@ -1132,3 +1132,6 @@ client/package-lock.json
 
 client/package.json
 node_modules/autoprefixer/README.md
+server/requirements.txt
+server/__pycache__/__init__.cpython-312.pyc
+server/__pycache__/app.cpython-312.pyc
