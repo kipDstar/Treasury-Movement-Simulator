@@ -1128,9 +1128,3 @@ node_modules/update-browserslist-db/LICENSE
 node_modules/update-browserslist-db/package.json
 node_modules/update-browserslist-db/README.md
 node_modules/update-browserslist-db/utils.js
-server/__init__.py
-server/app.py
-server/models/__init__.py
-server/models/models.py
-server/routes/accounts.py
-server/routes/transactions.py
