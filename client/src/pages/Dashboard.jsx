@@ -1,23 +1,19 @@
-export default function Dashboard() {
+import AccountCard from "../components/AccountCard";
+import TransferForm from "../components/TransferForm";
+import TransactionLog from "../components/TransactionLog";
+import { useTreasury } from "../context/TreasuryContext";
+
+const Dashboard = () => {
+  const { accounts } = useTreasury();
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="p-4 bg-blue-100 rounded-xl shadow">
-        <h2 className="text-xl font-semibold mb-2">Account Balances</h2>
-        <ul className="text-sm space-y-1">
-          <li>USD Treasury: $1,000,000</li>
-          <li>NGN Treasury: ₦150,000,000</li>
-          <li>KES Treasury: KSh 20,000,000</li>
-        </ul>
-      </div>
-      <div className="p-4 bg-green-100 rounded-xl shadow">
-        <h2 className="text-xl font-semibold mb-2">Recent Transfers</h2>
-        <ul className="text-sm space-y-1">
-          <li>$50,000 → Nigeria FX Market</li>
-          <li>₦20M → Zenith Holdings</li>
-          <li>KSh 2M ← M-Pesa Treasury</li>
-        </ul>
-      </div>
+    <div className="p-6">
+      <h1>Treasury Simulator</h1>
+      <div className="grid md:grid-cols-3 gap-4">{accounts.map(acc => <AccountCard key={acc.id} account={acc} />)}</div>
+      <TransferForm />
+      <TransactionLog />
     </div>
-  )
-}
-// This component displays a simple dashboard with account balances and recent transfers.
+  );
+};
+export default Dashboard;
+
+// This component serves as the main dashboard for the Treasury Movement Simulator, displaying account cards, a transfer form, and a transaction log.

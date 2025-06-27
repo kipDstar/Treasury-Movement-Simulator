@@ -9,3 +9,4 @@ const TransactionLog = () => {
   );
 };
 export default TransactionLog;
+// This component displays a log of all transactions, showing the source and destination accounts, amount, currency, note, and timestamp.
